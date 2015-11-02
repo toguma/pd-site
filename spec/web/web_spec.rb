@@ -12,4 +12,9 @@ describe "nginx" do
   describe package("nginx") do
     it { should be_installed }
   end
+
+  describe file("/usr/share/nginx/html/index.html") do
+    its(:content) { should match /Proudit Inc./ }
+    its(:content) { should_not match /Welcome to nginx/ }
+  end
 end
