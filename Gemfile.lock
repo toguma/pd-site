@@ -41,6 +41,7 @@ PLATFORMS
 
 DEPENDENCIES
   docker-api
+  net-ssh (= 3.0.1)
   serverspec
   specinfra (= 2.12.7)
 
