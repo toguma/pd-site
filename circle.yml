@@ -1,20 +1,24 @@
 machine:
-  services:
-    - docker
+  timezone:
+    Asia/Tokyo
 
 dependencies:
-  override:
-    - docker info
-    - docker build -t toguma/pd-site .
+    override:
+        - sudo pip install awscli
+    post:
+        - aws configure set region ap-northeast-1
 
 test:
   override:
-    - bundle
-    - bundle exec rspec
+    - echo "All the tests are passed!!"
 
 deployment:
-  hub:
+  production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push toguma/pd-site
+      - aws s3 sync html/ s3://www.proudit.jp/ --delete
+  staging:
+    branch: staging
+    commands:
+      - aws s3 sync html/ s3://st.www.proudit.jp/ --delete
+
