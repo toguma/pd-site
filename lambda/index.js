@@ -24,7 +24,7 @@ exports.handler = function(event, context) {
                         Message: {
                             Body: {
                                 Text: {
-                                    Data: "mail：" + message.mail+ "\n" + "subject："+message.title + "contents："+message.contents
+                                    Data: "mail：" + message.mail+ "\n" + "subject："+message.name + "contents："+message.contents
                                 }
                             },
                             Subject: {
