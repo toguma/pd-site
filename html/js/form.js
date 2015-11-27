@@ -1,4 +1,3 @@
-    <script>
         var $id = function(id) { return document.getElementById(id); };
         AWS.config.region = "ap-northeast-1";
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: "ap-northeast-1:7a277149-9693-42d5-af02-75930f859d19"});
@@ -25,4 +24,3 @@
                 }
             });
         }
-    </script>
