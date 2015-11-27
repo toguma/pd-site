@@ -16,9 +16,9 @@ deployment:
   production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - aws s3 sync html/ s3://www.proudit.jp/ --delete
+      - aws s3 sync html/ s3://proudit.jp/ --delete
   staging:
     branch: staging
     commands:
-      - aws s3 sync html/ s3://st.www.proudit.jp/ --delete
+      - aws s3 sync html/ s3://st.proudit.jp/ --delete
 
