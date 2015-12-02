@@ -25,7 +25,7 @@ exports.handler = function(event, context) {
                                 }
                             },
                             Subject: {
-                                Data: "ホームページから問い合わせがありました。"
+                                Data: "HPからお問い合わせがありました。" + "From:" + message.url
                             }
                         },
                         Source: "info@proudit.jp"

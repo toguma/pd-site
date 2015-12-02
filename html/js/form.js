@@ -9,9 +9,10 @@
 
         function uploadFile() {
             AWS.config.region = 'ap-northeast-1';
+            var url = location.href;
             var s3BucketName = "pd-form-data";
             var now = new Date();
-            var obj = {"name":$id("name").value, "mail":$id("mail").value ,"contents":$id("contents").value, "date": now.toLocaleString()};
+            var obj = {"name":$id("name").value, "mail":$id("mail").value ,"contents":$id("contents").value, "date": now.toLocaleString(), "url": location.herf()};
             var s3 = new AWS.S3({params: {Bucket: s3BucketName}});
             var blob = new Blob([JSON.stringify(obj, null, 2)], {type:'text/plain'});
             s3.putObject({Key: "uploads/" +now.getTime()+".txt", ContentType: "text/plain", Body: blob, ACL: "public-read"},
