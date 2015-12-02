@@ -22,5 +22,5 @@ deployment:
     commands:
       - aws s3 sync html/ s3://st.proudit.jp/ --delete
       - cd lambda/ && zip -r lambda.zip ./*
-      - aws lambda update-function-code --function-name pd-form --zip-file fileb://./lambda.zip --publish
+      - aws lambda update-function-code --function-name pd-form --zip-file fileb://./lambda/lambda.zip --publish
 
