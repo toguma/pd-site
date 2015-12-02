@@ -16,7 +16,7 @@ exports.handler = function(event, context) {
                 console.log('message:' + message);
                 var eParams = {
                         Destination: {
-                            ToAddresses: ["toguma@proudit.jp"]
+                            ToAddresses: ["info@proudit.jp"]
                         },
                         Message: {
                             Body: {
