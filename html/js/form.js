@@ -18,6 +18,7 @@
             function(err, data){
                 if(data !== null){
                     alert("お問い合わせ完了致しました");
+					console.log('data:' + data);
                 }
                 else{
                     alert("Upload Failed" + err.message);
