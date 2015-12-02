@@ -1,10 +1,7 @@
 console.log("Loading event")
 var aws = require('aws-sdk');
 var s3 = new aws.S3({apiVersion: '2006-03-01'});
-var ses = new aws.SES({apiVersion: '2010-12-01',
-                        accessKeyId: 'AKIAIPTDDARU7OYYWJDQ',
-                        secretAccesskey: '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',
-                        region: 'us-east-1' });
+var ses = new aws.SES({apiVersion: '2010-12-01', region: 'us-east-1' });
 exports.handler = function(event, context) {
     console.log('Received event:', JSON.stringify(event, null, 2));
     var bucket = event.Records[0].s3.bucket.name;
@@ -19,12 +16,12 @@ exports.handler = function(event, context) {
                 console.log('message:' + message);
                 var eParams = {
                         Destination: {
-                            ToAddresses: ["info@proudit.jp"]
+                            ToAddresses: ["toguma@proudit.jp"]
                         },
                         Message: {
                             Body: {
                                 Text: {
-                                    Data: "mail：" + message.mail+ "\n" + "subject："+message.name + "contents："+message.contents
+                                    Data: "mail：" + message.mail+ "\n" + "subject："+ message.name + "\n" + "contents："+ message.contents
                                 }
                             },
                             Subject: {
