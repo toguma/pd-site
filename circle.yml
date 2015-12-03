@@ -16,9 +16,9 @@ deployment:
   production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - aws s3 sync html/ s3://proudit.jp/ --delete
+      - aws s3 sync html/ s3://www.proudit.jp/ --delete
       - sed -i -e "s/REPLACE-DATA-BACKET/pd-form-data/g" html/js/form.js
-      - aws s3 sync html/ s3://st.proudit.jp/ --delete
+      - aws s3 sync html/ s3://www.proudit.jp/ --delete
       - cd lambda/ && zip -r lambda.zip ./*
       - aws lambda update-function-code --function-name pd-form --zip-file fileb://./lambda/lambda.zip --publish
   staging:
