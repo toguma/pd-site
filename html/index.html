@@ -28,7 +28,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -230,21 +229,22 @@
   				<div class="row">
    	 				<div class="col-sm-2"><label for="name">NAME</label></div>
    	 					<div class="col-sm-10 form-group">
-   	   						<input type="text" class="form-control input_per70" id="name" placeholder="プラウド 太郎">
+   	   						<input type="text" class="form-control input_per70" name="name"  id="name" placeholder="プラウド 太郎">
    	 					</div>
-   	 				<div class="col-sm-2"><label for="email">MAIL</label></div>
+   	 				<div class="col-sm-2"><label for="mail">MAIL</label></div>
    	 					<div class="col-sm-10 form-group">
-   	   						<input type="email" class="form-control input_per70" id="email" placeholder="user@example.com">
+   	   						<input type="email" class="form-control input_per70" name="mail" id="mail" placeholder="user@example.com">
    	 					</div>
-   	 				<div class="col-sm-2"><label for="data">Inquiry</label></div>
+   	 				<div class="col-sm-2"><label for="contents">Inquiry</label></div>
    	 					<div class="col-sm-10 form-group">
-   	  	 					<textarea class="form-control" rows="10" id="data" placeholder="1200文字以内"></textarea>
+   	  	 					<textarea class="form-control" rows="10" name="contents" id="contents" placeholder="1200文字以内"></textarea>
    	 					</div>
   					</div>
 		 		</div>
 				</div>
            		 <div class="form-group text-center">
-               		 <button type="submit" class="btn btn-dark">Send Inquiry</button>
+               		 <!-- <button onClick="uploadFile();" type="submit" class="btn btn-dark">Send Inquiry</button> -->
+                     <input onClick="uploadFile();" type="button" value="Send Inquiry"  class="btn btn-dark" />
           		</div>
    		</form>
 
@@ -290,6 +290,10 @@
         </div>
     </footer>
 
+    <!-- Form Script  -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.19.min.js"></script>
+    <script src="js/form.js"></script>
+ 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
