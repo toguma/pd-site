@@ -44,13 +44,21 @@
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
             <li>
+                <a href="#news" onclick = $("#menu-close").click(); >News</a>
+            </li>
+            <li>
                 <a href="#about" onclick = $("#menu-close").click(); >About</a>
             </li>
             <li>
                 <a href="#services" onclick = $("#menu-close").click(); >Services</a>
             </li>
+                 	<ul>
+    				<li><a tabindex="-1" href="#proudcloud">Proud Cloud</a></li>
+    				<li><a tabindex="-1" href="#proudcoordinator">Proud Cordinator</a></li>
+    				<li><a tabindex="-1" href="#">proud HealthFirst</a></li>
+  					</ul>
             <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+                <a href="#blog" onclick = $("#menu-close").click(); >Blog</a>
             </li>
             <li>
                 <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
@@ -65,11 +73,49 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Proudit Inc.</h1>
-            <h3>We'll provide the <b>next generation</b> infrastructure </h3>
+            <h3><b>next generation</b> cloud infra develop company. </h3>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">About Us</a>
         </div>
     </header>
+
+    <!-- About -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+					<br>
+					<h2>News</h2>
+					<br>
+
+        <div class="container news">
+            <div class="row">
+                <div class="col-sm-4 text-center"></div>
+                <div class="col-sm-4 text-center">
+					<table class="table table-condensed">
+  					<tr>
+    					<td>2015.12.10</td>
+						<td><div class="text-left">ホームページリニューアル</div></td>
+  					</tr>
+  					<tr>
+    					<td>2015.12.01</td>
+    					<td><div class="text-left">AWSコンサルティングパートナー加入</div></td>
+  					</tr>
+					</table>
+                <div class="col-sm-4 text-center"></div>
+                </div>
+            </div>
+        </div>
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+ <br>
+ <br>
+    </section>
+
 
     <!-- About -->
     <section id="about" class="about">
@@ -78,8 +124,8 @@
                 <div class="col-lg-12 text-center">
                     <h2>We Are 「Next Generation」Cloud Infrastructure Coordinator</h2>
                     <p class="lead">私達はDevOps時代に適した「次世代」のクラウドインフラ環境をご提案します。</p>
-                    <p class="lead"><a target="_blank" href="http://www.proudit.jp/proudcloud/">ProudCloudサービス詳細</a></p>
-			    	<p> <img src="img/apn-logo.png"></img> 2015 AWSコンサルティングパートナー加入</p>
+                    <p class="lead"><a target="_blank" href="#proudcloud">ProudCloudサービス詳細</a></p>
+			    	<p>AWSコンサルティングパートナー  <img src="img/apn-logo.png"></img></p>
                 </div>
             </div>
             <!-- /.row -->
@@ -92,8 +138,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>For The Best Health Of Your Enginir Life</h2>
-                    <p class="lead">エンジニアの心と体の健康維持をトータルサポートします。</p>
-                    <p class="lead"><a target="_blank" href="http://www.proudit.jp/proudcloud/">ヘルスケアサービス詳細</a></p>
+                    <p class="lead">エンジニアの心と体の健康維持をホリスティックにサポートします。</p>
+                    <p class="lead"><a target="_blank" href="http://www.proudit.jp/proudcloud/">ヘルスファースト事業</a></p>
                 </div>
             </div>
             <!-- /.row -->
@@ -119,34 +165,34 @@
                                 <h4>
                                     <strong>Proud Cloud</strong>
                                 </h4>
-                                <p>AWSサーバ運用サービス</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>次世代型サーバマネージドサービス</p>
+                                <a href="#proudcloud" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                                <i class="fa fa-cogs fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Proud less</strong>
+                                    <strong>Proud Coordinator</strong>
                                 </h4>
-                                <p>サーバレスシステム構築</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>クラウドインフラ構築・コンサルサービス</p>
+                                <a href="#proudcoordinator" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                                <i class="fa fa-heart fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Proud Healthfirst</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>SE向けヘルスケアサービス</p>
+                                <a href="#" class="btn btn-dark">Coming Soon</a>
                             </div>
                         </div>
                     </div>
@@ -159,59 +205,145 @@
         <!-- /.container -->
     </section>
 
-    <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>ProudBlog</h1>
-            <h3>Proudit公式Blogサイト。ほぼ日々更新(目標)!</h3>
-        </div>
-    </aside>
-
     <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
+    <section id="proudcloud" class="proudcloud">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
+                    <h2>Proud Cloud</h2>
+                    <hr class="small">
+		<p>クラウドサーバ運用管理サービス<br>
+		DevOps時代に適した、次世代型の「インフラ運用・管理」を提案。</p>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="service1">
+
+<h4>安心/堅牢なベースサービス</h4>
+<ul class="fa-ul">
+　<li><i class="fa-li fa fa-check-square"></i>弊社管理Zabbixシステム利用による24/365サービス監視/通知/復旧</li>
+　<li><i class="fa-li fa fa-check-square"></i>バックアップ・リストア運用</li>
+　<li><i class="fa-li fa fa-check-square"></i>EC2/RDS/ミドルウェア設定代行・運用代行</li>
+</ul>
+<br>
+
+<h4>Code as infrastructure</h4>
+<ul class="fa-ul">
+　<li><i class="fa-li fa fa-check-square"></i>CloudFormation/Ansible/RoadwakerなどでNW/サーバを構成管理</li>
+　<li><i class="fa-li fa fa-check-square"></i>CodeをGithubにて管理/共有し、透明性のある運用が可能</li>
+　<li><i class="fa-li fa fa-check-square"></i>コード管理によりサービスレベル均一化、かつ多数展開時の工数省力化</li>
+</ul>
+<br>
+
+<h4>Docker 運用サービス</h4><br>
+<ul class="fa-ul">
+  <li><i class="fa-li fa fa-check-square"></i>Docker基盤サーバの運用・管理にも対応</li>
+　<li><i class="fa-li fa fa-check-square"></i>コンテナサービスのデプロイのサポート </li>
+　<li><i class="fa-li fa fa-check-square"></i>AWS ECS / GCP / DockerSwan などに対応 </li>
+</ul>
+<br>
+
+                    <hr class="small">
+<h4 class="price"><i class="fa fa-jpy"></i>20,000〜 PerHost/month</h4>
+<h4 class="price">or</h4>
+<h4 class="price"><i class="fa fa-jpy"></i>50,000〜 System/month</h4>
+                    <hr class="small">
+<br>
+
+
+<p class="hosoku"><b> ※価格は参考となります。<br>
+詳細なお見積もりは規模・ご要件に応じて個別にご提案致します。</b></p><br><br>
                             </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
                 </div>
-                <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
+	<br>
+	<br>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="proudcoordinator" class="proudcoordinator">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Proud Coordinator</h2>
+                    <hr class="small">
+<p>昨今のDevOps時代に適した、次世代型の「インフラ基盤」の構築サポート・コンサルティングサービス。</p>
+                    <hr class="small">
+                    <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="service1">
+
+							
+<hr>
+
+<h4>サーバレスシステムサポート<br>(S3/CroudFront/Lambda/ etc..)</h4>
+<ul class="fa-ul">
+　<li><i class="fa-li fa fa-check-square"></i>次世代型サーバレス構成の維持・管理サポートサービス</li>
+  <li><i class="fa-li fa fa-check-square"></i>コーポレートサイトなど、静的＋簡易動的サイトの設計・運用サポート</li>
+</ul>
+<br>
+
+<h4 class="price"><i class="fa fa-jpy"></i>5,000〜 System/month</h4>
+<br>
+
+<hr>
+
+<h4>CI(継続的インテグレーション)構築・サポート</h4>
+<ul class="fa-ul">
+　<li><i class="fa-li fa fa-check-square"></i>CI(継続的インテグレーション)環境の設計、構築サポートサービス</li>
+  <li><i class="fa-li fa fa-check-square"></i>Github/CircleCI/CodeDeploy/Ansible etc..各種ツールを環境によって選択</li>
+</ul>
+<br>
+
+<h4 class="price"><i class="fa fa-jpy"></i>100,000〜 initial cost </h4>
+<h4 class="price">or/and</h4>
+<h4 class="price"><i class="fa fa-jpy"></i>30,000〜 System/month </h4>
+<br>
+<hr>
+
+<h4>クラウド移設トータルサポート</h4>
+<ul class="fa-ul">
+　<li><i class="fa-li fa fa-check-square"></i>クラウド/オンプレミス間の最適な移設方式、構成提案</li>
+  <li><i class="fa-li fa fa-check-square"></i>相談、設計、構築、移設、運用までのトータルサポート可能</li>
+</ul>
+<br>
+
+<h4 class="price"><i class="fa fa-jpy"></i>150,000〜 initial cost </h4>
+<h4 class="price">or/and</h4>
+<h4 class="price"><i class="fa fa-jpy"></i>50,000〜 System/month </h4>
+<br>
+<hr>
+<p class="hosoku"><b> ※価格は参考となります。<br>
+詳細なお見積もりは規模・ご要件に応じて個別にご提案致します。</b></p><br><br>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+	<br>
+	<br>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="blog">
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>ProudBlog</h1>
+            <h3>Proudit公式Blogサイト</h3>
+            <a href="http://blog.proudit.jp/" class="btn btn-dark">Lean More</a>
+        </div>
+    </aside>
     </section>
 
     <!-- Call to Action -->
