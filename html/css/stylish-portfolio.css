@@ -196,6 +196,23 @@ hr.small {
     margin-bottom: 30px;
 }
 
+.service1 {
+   text-align: left;
+}
+
+h4.price {
+   text-align: center;
+}
+
+p.hosoku {
+   font-size: small;
+   text-align: center;
+}
+
+.proudcoordinator {
+   background-color: #FAFAFA;
+}
+
 /* Callout */
 
 .callout {
