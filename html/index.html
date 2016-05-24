@@ -8,6 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+　 <!--jQueryvalidation追加-->
+ 　<!-- ▼jQuery本体 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- ▼バリデーション -->
+    <link rel="stylesheet" href="css/validationEngine.jquery.css">
+    <script src="js/jquery.validationEngine.js"></script>
+    <script src="js/jquery.validationEngine-ja.js"></script>
+    
+ 　<script>
+      $(function(){
+        jQuery("#form").validationEngine();
+      });
+    </script>
 
     <title>Proudit Inc. Corporate Site</title>
 
@@ -363,17 +377,18 @@
          <hr class="small">
         </div>
 
- 		<form fole="form">
+　　<!--form fore部分を変更しclass要素にvalidationを追加-->
+ 		 <form id="form">
 			<div class="container">
 	 		<div class="col-xs-8 col-xs-offset-2">
   				<div class="row">
    	 				<div class="col-sm-2"><label for="name">NAME</label></div>
    	 					<div class="col-sm-10 form-group">
-   	   						<input type="text" class="form-control input_per70" name="name"  id="name" placeholder="プラウド 太郎">
+   	   						<input type="text" class="validate[required] form-control input_per70" name="name"  id="name" placeholder="プラウド 太郎">
    	 					</div>
    	 				<div class="col-sm-2"><label for="mail">MAIL</label></div>
    	 					<div class="col-sm-10 form-group">
-   	   						<input type="email" class="form-control input_per70" name="mail" id="mail" placeholder="user@example.com">
+   	   						<input type="email" class="validate[custom[email]] form-control input_per70" name="mail" id="mail" placeholder="user@example.com">
    	 					</div>
    	 				<div class="col-sm-2"><label for="contents">Inquiry</label></div>
    	 					<div class="col-sm-10 form-group">
@@ -434,9 +449,8 @@
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.19.min.js"></script>
     <script src="js/form.js"></script>
  
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
+ 　<!--既存jQueryを削除-->
+  
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
