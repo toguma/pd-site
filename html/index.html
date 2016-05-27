@@ -402,6 +402,18 @@
                      <input onClick="uploadFile();" type="button" value="Send Inquiry"  class="btn btn-dark" />
           		</div>
    		</form>
+   		
+<script>
+　$(function(){
+　　$('#form').submit(function(){
+　　　var name = $('#name').val();
+　　　if(name.length == 0){
+　　　　alert("名前を入力してください。");
+　　　　return false;
+　　　};
+　　});
+　});
+</script>
 
     </section>
     </aside>
