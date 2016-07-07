@@ -22,17 +22,7 @@
         jQuery("#form").validationEngine();
       });
     </script>
-    
-    <script>
-      $("#form").uploadFile();(function(){
-var err = 0;
-
-if(err==1){
-return false;
-
-}
-    </script>
-
+  
     <title>Proudit Inc. Corporate Site</title>
 
     <!-- Bootstrap Core CSS -->
@@ -409,7 +399,7 @@ return false;
 				</div>
            		 <div class="form-group text-center">
                		 <!-- <button onClick="uploadFile();" type="submit" class="btn btn-dark">Send Inquiry</button> -->
-                     <input onClick="uploadFile();" type="button" value="Send Inquiry"  class="btn btn-dark" />
+                     <input onClick="uploadFile();" "submitAfterValidation();" type="button" value="Send Inquiry"  class="btn btn-dark" />
           		</div>
    		</form>
 
