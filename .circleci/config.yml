@@ -8,6 +8,11 @@ jobs:
         - image: debian:stretch-slim
 
       steps:
+        - run:
+            name: Install Package
+            command: |
+              apt-get install git ssh
+
         - checkout
 
         - run:
