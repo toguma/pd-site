@@ -11,14 +11,14 @@ jobs:
         - run:
             name: Install Package
             command: |
-              apt-get update; apt-get install git ssh -y
+              apt-get update; apt-get install git ssh tzdata -y
 
         - checkout
 
         - run:
-            name: Install Package
+            name: timezone
             command: |
-              'echo ''Asia/Tokyo'' | sudo tee -a /etc/timezone; sudo dpkg-reconfigure -f noninteractive tzdata
+              echo "Asia/Tokyo" > /etc/timezone ; rm /etc/localtime ; ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime; dpkg-reconfigure -f noninteractive tzdata
 
         - run:
             name: Install Package
