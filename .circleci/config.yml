@@ -5,7 +5,7 @@ jobs:
       shell: /bin/bash
 
       docker:
-        - image: ubuntu:18.04
+        - image: debian:stretch-slim
 
       steps:
         - checkout
