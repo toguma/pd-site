@@ -1,0 +1,52 @@
+version: 2
+jobs:
+  build:
+      parallelism: 1
+      shell: /bin/bash
+
+      docker:
+        - image: debian:stretch-slim
+
+      steps:
+        - run:
+            name: Install Package
+            command: |
+              apt-get update; apt-get install git ssh tzdata python-pip zip -y
+
+        - checkout
+
+        - run:
+            name: timezone
+            command: |
+              echo "Asia/Tokyo" > /etc/timezone ; rm /etc/localtime ; ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime; dpkg-reconfigure -f noninteractive tzdata
+
+        - run:
+            name: Install Package
+            command: |
+              pip install awscli
+
+        - run:
+            name: Setup AWS credentials
+            command: |
+              mkdir -p ~/.aws
+              printf "[default]\nregion = ap-northeast-1\naws_access_key_id = ${AWS_ACCESS_KEY_ID}\naws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" > ~/.aws/config
+              printf "[default]\naws_access_key_id = ${AWS_ACCESS_KEY_ID}\naws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" > ~/.aws/credentials
+              chmod 600 ~/.aws/*
+
+        - deploy:
+            name: s3 sync data 
+            no_output_timeout: 10m
+            command: |
+              if [ "${CIRCLE_BRANCH}" == "staging" ]; then
+                sed -i -e "s/REPLACE-DATA-BACKET/st-pd-form-data/g" html/js/form.js
+                aws s3 sync html/ s3://st.proudit.jp/ --delete
+                cd lambda/ && zip -r lambda.zip ./* ; cd ..
+                aws lambda update-function-code --function-name st-pd-form --zip-file fileb://./lambda/lambda.zip --publish
+              fi
+
+              if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                sed -i -e "s/REPLACE-DATA-BACKET/pd-form-data/g" html/js/form.js
+                aws s3 sync html/ s3://www.proudit.jp/ --delete
+                cd lambda/ && zip -r lambda.zip ./* ; cd ..
+                aws lambda update-function-code --function-name pd-form --zip-file fileb://./lambda/lambda.zip --publish
+              fi
