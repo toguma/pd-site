@@ -215,6 +215,19 @@ p.hosoku {
 
 /* Callout */
 
+.entertainment {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #000;
+    background: url(../img/enta.png) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+/* Callout */
+
 .callout {
     display: table;
     width: 100%;
