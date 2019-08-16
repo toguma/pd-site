@@ -39,14 +39,14 @@ jobs:
             command: |
               if [ "${CIRCLE_BRANCH}" == "staging" ]; then
                 sed -i -e "s/REPLACE-DATA-BACKET/st-pd-form-data/g" html/js/form.js
-                aws s3 sync html/ s3://st.proudit.jp/ --delete --exclude "node_modules/*" 
+                aws s3 sync html/ s3://st.proudit.jp/ --delete 
                 cd lambda/ && zip -r lambda.zip ./* ; cd ..
                 aws lambda update-function-code --function-name st-pd-form --zip-file fileb://./lambda/lambda.zip --publish
               fi
 
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
                 sed -i -e "s/REPLACE-DATA-BACKET/pd-form-data/g" html/js/form.js
-                aws s3 sync html/ s3://www.proudit.jp/ --delete --exclude "node_modules/*"
+                aws s3 sync html/ s3://www.proudit.jp/ --delete
                 cd lambda/ && zip -r lambda.zip ./* ; cd ..
                 aws lambda update-function-code --function-name pd-form --zip-file fileb://./lambda/lambda.zip --publish
               fi
